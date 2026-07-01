@@ -1,0 +1,13 @@
+{
+  "K": 564,
+  "original_feature_dim": 2304,
+  "selected_feature_dim": 564,
+  "selected_original_indices_path": "runs_chain_saprot_prott5_edit+mdndo\\K_564\\cache\\selected_original_indices_saprot_prott5_edit+mdndo_chain_K564.npy",
+  "X_train_reconstructed_by_original_indices": "X_train_raw[:, selected_original_indices]",
+  "X_train_used_by_model": "runs_chain_saprot_prott5_edit+mdndo\\K_564\\cache\\X_train_saprot_prott5_edit+mdndo_chain_K564.npy",
+  "direct_index_reconstruction_passed": false,
+  "max_abs_diff": 6.856299877166748,
+  "atol": 1e-06,
+  "rtol": 1e-05,
+  "predictor_recommendation": "Use selector_chain_paths to transform the original feature vector."
+}

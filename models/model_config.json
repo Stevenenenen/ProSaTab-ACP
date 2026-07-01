@@ -1,0 +1,59 @@
+{
+  "model_name": "ProSaTab-ACP",
+  "task": "Anticancer peptide prediction",
+
+  "feature_name": "saprot_prott5",
+  "feature_concat_order": "SaProt + ProtT5",
+  "original_feature_dim": 2304,
+  "selected_feature_dim": 564,
+  "final_k": 564,
+
+  "sampling_method_name": "edit+mdndo",
+  "threshold_for_prediction": 0.5,
+
+  "label_map": "label_map.json",
+
+  "final_model_path": "final_model/tabpfn_final.tabpfn_fit",
+
+  "preprocessor_chain": [
+    "preprocessors/step_01.json",
+    "preprocessors/step_02.json",
+    "preprocessors/step_03.json",
+    "preprocessors/step_04.json",
+    "preprocessors/step_05.json",
+    "preprocessors/step_06.json",
+    "preprocessors/step_07.json",
+    "preprocessors/step_08.json",
+    "preprocessors/step_09.json",
+    "preprocessors/step_10.json",
+    "preprocessors/step_11.json",
+    "preprocessors/step_12.json",
+    "preprocessors/step_13.json",
+    "preprocessors/step_14.json",
+    "preprocessors/step_15.json",
+    "preprocessors/step_16.json",
+    "preprocessors/step_17.json",
+    "preprocessors/step_18.json",
+    "preprocessors/step_19.json",
+    "preprocessors/step_20.json",
+    "preprocessors/step_21.json",
+    "preprocessors/step_22.json",
+    "preprocessors/step_23.json",
+    "preprocessors/step_24.json"
+  ],
+
+  "predictor_feature_transform_mode": "selector_chain_transform_required",
+
+  "saprot": {
+    "model_name": "westlake-repl/SaProt_1.3B_AF2",
+    "dim": 1280,
+    "input_format": "AA + # structure placeholder",
+    "max_length": 257
+  },
+
+  "prott5": {
+  "model_path": "../my_hugging_face/local/prott5",
+  "dim": 1024,
+  "max_length": 255
+  }
+}
